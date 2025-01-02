@@ -37,7 +37,7 @@ public class DrawingTextureGenerator : MonoBehaviour
 			{
 				for (int x = 0; x < w; x++)
 				{
-					float sample = Mathf.PerlinNoise((float)x / w * m_scale * m_scaleX, (float)y / h * m_scale * m_scaleY);
+					float sample = Mathf.PerlinNoise((float)x / w * m_scale * m_scaleX + Random.value, (float)y / h * m_scale * m_scaleY);
 					sample = Mathf.Pow(sample, m_power) * m_cor;
 					m_texture.SetPixel(x, y, new Color(sample, sample, sample));
 
